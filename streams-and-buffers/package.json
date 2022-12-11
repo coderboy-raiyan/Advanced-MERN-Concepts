@@ -1,0 +1,6 @@
+{
+  "name": "streams-and-buffers",
+  "version": "1.0.0",
+  "main": "streams.js",
+  "license": "MIT"
+}
