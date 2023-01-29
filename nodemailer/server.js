@@ -3,6 +3,7 @@ const app = express();
 const http = require("http");
 const routes = require("./routes");
 const ErrorHandler = require("./utils/errorHandler");
+require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
 const server = http.createServer(app);
