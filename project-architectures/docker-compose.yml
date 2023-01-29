@@ -1,0 +1,28 @@
+version: "1.0.0"
+services:
+  # mysqldb:
+  #   container_name: mysqldb
+  #   image: mysql:latest
+  #   restart: unless-stopped
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=123456
+  #     - MYSQL_ALLOW_EMPTY_PASSWORD
+  #     - MYSQL_DB=auth
+  api-gateway:
+    container_name: api-gateway
+    build: ./api-gateway
+    restart: unless-stopped
+    command: npm start
+    ports:
+      - "4000:4000"
+  auth-service:
+    # depends_on:
+    #   - mysqldb
+    container_name: auth-service
+    build: ./auth-service
+    restart: unless-stopped
+    command: npm start
+    ports:
+      - "4001:4001"
