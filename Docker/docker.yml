@@ -1,8 +1,26 @@
-# Run a container
+# to create and Run a container
+
 docker run hello-world
+
 # to pass a command after running a container
+
 docker run busybox echo hi there 
+
 # to see which container is running command
+
 docker ps
+
 # to see the history of all container 
+
 docker ps --all
+
+# to create a container on Docker
+docker create hello-world
+
+# to start container
+
+docker start -a <container ID> -> here -a means run the show the output on my terminal
+
+# to Remove all that stop container
+
+docker system prune
