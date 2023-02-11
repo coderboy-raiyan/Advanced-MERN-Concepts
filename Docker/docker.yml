@@ -1,0 +1,8 @@
+# Run a container
+docker run hello-world
+# to pass a command after running a container
+docker run busybox echo hi there 
+# to see which container is running command
+docker ps
+# to see the history of all container 
+docker ps --all
