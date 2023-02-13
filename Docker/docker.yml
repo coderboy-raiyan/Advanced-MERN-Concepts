@@ -14,9 +14,9 @@ docker ps
 
 docker ps --all
 
-# to create a container on Docker
+# to create a container on Docker and run a command
 
-docker create hello-world
+docker create hello-world <command>
 
 # to start container
 
@@ -29,3 +29,8 @@ docker system prune
 # see the docker logs of a particular container
 
 docker logs <container ID>
+
+# to shutdown any container
+# It's better than docker stop
+docker kill <container ID> 
+docker stop <container ID>
