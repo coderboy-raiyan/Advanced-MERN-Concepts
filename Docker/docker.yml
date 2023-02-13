@@ -34,3 +34,7 @@ docker logs <container ID>
 # It's better than docker stop
 docker kill <container ID> 
 docker stop <container ID>
+
+# to execute more commands in a running container 
+# -it flag is very important here...for pass input after running
+docker exec -it <container ID> <command>
