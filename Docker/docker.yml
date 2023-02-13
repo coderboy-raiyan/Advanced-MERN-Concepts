@@ -15,6 +15,7 @@ docker ps
 docker ps --all
 
 # to create a container on Docker
+
 docker create hello-world
 
 # to start container
@@ -24,3 +25,7 @@ docker start -a <container ID> -> here -a means run the show the output on my te
 # to Remove all that stop container
 
 docker system prune
+
+# see the docker logs of a particular container
+
+docker logs <container ID>
