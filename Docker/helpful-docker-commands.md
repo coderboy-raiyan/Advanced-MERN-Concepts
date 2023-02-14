@@ -1,16 +1,17 @@
+```
 # to create and Run a container
 
 docker run hello-world
 
 # to pass a command after running a container
 
-docker run busybox echo hi there 
+docker run busybox echo hi there
 
 # to see which container is running command
 
 docker ps
 
-# to see the history of all container 
+# to see the history of all container
 
 docker ps --all
 
@@ -32,13 +33,18 @@ docker logs <container ID>
 
 # to shutdown any container
 # It's better than docker stop
-docker kill <container ID> 
+docker kill <container ID>
 docker stop <container ID>
 
-# to execute more commands in a running container 
+# to execute more commands in a running container
 # -it flag is very important here...for pass input after running
 docker exec -it <container ID> <command>
 
 
 # to make a fully command prompt inside a container
 docker exec -it <container ID> sh
+
+# directly run command prompt in a fresh start
+
+docker run -it redis sh
+```
