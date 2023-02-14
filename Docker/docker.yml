@@ -38,3 +38,7 @@ docker stop <container ID>
 # to execute more commands in a running container 
 # -it flag is very important here...for pass input after running
 docker exec -it <container ID> <command>
+
+
+# to make a fully command prompt inside a container
+docker exec -it <container ID> sh
