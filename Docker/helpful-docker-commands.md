@@ -36,20 +36,22 @@ docker logs <container ID>
 docker kill <container ID>
 docker stop <container ID>
 
-# to execute more commands in a running container
-# -it flag is very important here...for pass input after running
+<!-- # to execute more commands in a running container -->
+<!-- # -it flag is very important here...for pass input after running -->
 docker exec -it <container ID> <command>
 
 
-# to make a fully command prompt inside a container
+<!-- # to make a fully command prompt inside a container -->
 docker exec -it <container ID> sh
 
-# directly run command prompt in a fresh start
+<!-- # directly run command prompt in a fresh start -->
 
 docker run -it redis sh
 
 <!-- to build and image -->
+
 docker build .
+
 <!-- to build and image with a name -->
 docker build -t raiyan/<project name> .
 ```
