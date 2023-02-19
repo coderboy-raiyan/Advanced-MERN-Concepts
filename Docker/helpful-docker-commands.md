@@ -47,4 +47,9 @@ docker exec -it <container ID> sh
 # directly run command prompt in a fresh start
 
 docker run -it redis sh
+
+<!-- to build and image -->
+docker build .
+<!-- to build and image with a name -->
+docker build -t raiyan/<project name> .
 ```
