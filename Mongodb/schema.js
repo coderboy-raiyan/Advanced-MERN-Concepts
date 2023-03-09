@@ -38,3 +38,26 @@ db.createCollection("posts", {
     },
   },
 });
+
+db.createCollection("messages", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["sender", "receiver", "text"],
+      properties: {
+        sender: {
+          bsonType: "objectId",
+          description: "sender is required",
+        },
+        receiver: {
+          bsonType: "objectId",
+          description: "receiver is required",
+        },
+        text: {
+          bsonType: "string",
+          description: "text is required",
+        },
+      },
+    },
+  },
+});
