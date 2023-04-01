@@ -14,3 +14,6 @@ db.movies.find({ genres: ["drama"] }); // Array -> data will give exact with thi
 db.inventory.find({
   $and: [{ price: { $ne: 1.99 } }, { price: { $exists: true } }],
 });
+
+// Element Operators
+db.user.find({ age: { $exists: true, $ne: null } });
