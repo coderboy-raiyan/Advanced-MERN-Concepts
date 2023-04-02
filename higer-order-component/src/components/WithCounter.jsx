@@ -6,6 +6,7 @@ function WithCounter(Component) {
     if (!isLoggedIn) {
       return "Please login";
     }
+
     const [counter, setCounter] = useState(0);
     function increase() {
       setCounter((prev) => prev + 1);
