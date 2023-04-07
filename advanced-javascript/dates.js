@@ -5,7 +5,8 @@
 
 const day = document.querySelector(".day");
 const minute = document.querySelector(".minute");
-const second = document.querySelector(".secound");
+const second = document.querySelector(".second");
+const hour = document.querySelector(".hour");
 
 const workingDays = [
   "Sunday",
@@ -17,7 +18,20 @@ const workingDays = [
   "Saturday",
 ];
 
-const currentDay = new Date();
-const myBirthDay = new Date(2023, 8, 9);
-console.log(myBirthDay.getTime());
-console.log(currentDay.getTime());
+const myBirthDay = new Date(2023, 8, 9).getTime();
+
+function countDown() {
+  const currentDay = new Date().getTime();
+  const timeSpan = myBirthDay - currentDay;
+  const dayLeft = Math.floor(timeSpan / (1000 * 60 * 60 * 24));
+  const hoursLeft = Math.floor(
+    (timeSpan % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minuteLeft = Math.floor((timeSpan % (1000 * 60 * 60)) / (1000 * 60));
+  const secondLeft = Math.floor((timeSpan % (1000 * 60)) / 1000);
+  day.textContent = dayLeft;
+  hour.textContent = hoursLeft;
+  minute.textContent = minuteLeft;
+  second.textContent = secondLeft;
+}
+setInterval(countDown, 1000);
