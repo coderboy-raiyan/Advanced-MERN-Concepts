@@ -35,3 +35,9 @@ function countDown() {
   second.textContent = secondLeft;
 }
 setInterval(countDown, 1000);
+
+const a = new Date();
+console.log(a);
+console.log((+a % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+console.log((+a % (1000 * 60 * 60)) / (1000 * 60));
+console.log((+a % (1000 * 60)) / 1000);
