@@ -36,8 +36,16 @@ function countDown() {
 }
 setInterval(countDown, 1000);
 
-const a = new Date();
-console.log(a);
-console.log((+a % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-console.log((+a % (1000 * 60 * 60)) / (1000 * 60));
-console.log((+a % (1000 * 60)) / 1000);
+function dayPassed(present, previous) {
+  return Math.round((present - previous) / (1000 * 60 * 60 * 24));
+}
+
+const present = new Date();
+
+const past = new Date(2023, 3, 2);
+
+console.log(
+  dayPassed(present, past) <= 7
+    ? "a day ago"
+    : `${dayPassed(present, past)} days ago`
+);
